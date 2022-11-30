@@ -40,6 +40,34 @@
       "type": "Pizzeria",
       "adresse": "12 Bd de la République, 92250 La Garenne-Colombes",
       "loc": [48.90578028826483, 2.2541679259247966]
+    },
+    {
+      "id": 7,
+      "name": "Meson La Venta",
+      "type": "Tapas et produits ibériques",
+      "adresse": "17 Pl. Meynard, 33000 Bordeaux",
+      "loc": [44.83420128726598, -0.5665188342132396]
+    },
+    {
+      "id": 8,
+      "name": "M&D Pizza & Burger",
+      "type": "Fast-food",
+      "adresse": "7A Queens Dr, Weltevreden Valley, Cape Town, 7785, Afrique du Sud",
+      "loc": [-34.02444933422849, 18.58848945545144]
+    },
+    {
+      "id": 9,
+      "name": "Das Monaco's - Genussrestaurant Pizzeria",
+      "type": "Pizzeria",
+      "adresse": "Amraser Str. 110, 6020 Innsbruck, Autriche",
+      "loc": [47.26138198779564, 11.417646016268142]
+    },
+    {
+      "id": 10,
+      "name": "Snack world 金茂.壹+壹",
+      "type": "Streetfood chinoise",
+      "adresse": "7 Rue Joubert, 75009 Paris",
+      "loc": [48.8745954299004, 2.3319696066531694]
     }
   ]
 

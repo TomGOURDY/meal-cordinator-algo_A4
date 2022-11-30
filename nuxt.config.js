@@ -38,8 +38,17 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    'nuxt-leaflet',
+    'nuxt-socket-io',
   ],
 
+  io: {
+    // module options
+    sockets: [{
+      name: 'main',
+      url: 'http://localhost:3000'
+    }]
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }

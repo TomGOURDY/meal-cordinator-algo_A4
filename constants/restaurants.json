@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "name": "McDonald's - Gare de La Défense",
+      "type": "Fast-food",
+      "adresse": "GARE RER PLACE DES ECHANGES, 92800 Puteaux",
+      "loc": [48.89242772596987, 2.238597584341366]
+    },
+    {
+      "id": 2,
+      "name": "Yankee Burger",
+      "type": "Fast-food",
+      "adresse": "47 Esp. Charles de Gaulle, 92000 Nanterre",
+      "loc": [48.89454998444094, 2.223231301914507]
+    },
+    {
+      "id": 3,
+      "name": "Yummy",
+      "type": "Sushi & Gastronomie japonaise",
+      "adresse": "87 Rue des 3 Fontanot, 92000 Nanterre",
+      "loc": [48.895399960735304, 2.2242185663116274]
+    },
+    {
+      "id": 4,
+      "name": "Mongoo",
+      "type": "Salades composées",
+      "adresse": "18 All. de l'Arche, 92400 Courbevoie",
+      "loc": [48.89576928929285, 2.236872863355457]
+    },
+    {
+      "id": 5,
+      "name": "Pub Saint John's",
+      "type": "Pub irlandais",
+      "adresse": "188 Av. Charles de Gaulle, 92200 Neuilly-sur-Seine",
+      "loc": [48.8861635354747, 2.257948366668135]
+    },
+    {
+      "id": 6,
+      "name": "Venoza",
+      "type": "Pizzeria",
+      "adresse": "12 Bd de la République, 92250 La Garenne-Colombes",
+      "loc": [48.90578028826483, 2.2541679259247966]
+    }
+  ]
+

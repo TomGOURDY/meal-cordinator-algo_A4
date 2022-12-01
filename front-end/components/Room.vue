@@ -1,6 +1,6 @@
 <template>
   <div id="room">
-    <h1>Room Name</h1>
+    <h1>Room</h1>
     <div id="participants">
       <div class="personCard">
         <h2>Name</h2>
@@ -31,7 +31,7 @@ export default {
 <style>
 #room {
   height: 94vh;
-  width: 15%;
+  width: 25%;
   margin-top: 2vh;
   display: flex;
   flex-direction: column;

@@ -12,12 +12,20 @@ import io from 'socket.io-client';
 export default {
   data() {
     return{
-      socket: io('http://localhost:3000', {autoConnect:false}),
+      socket: io('http://localhost:3001', {autoConnect:false}),
     }
   },
   mounted(){
-    this.socket = this.$nuxtSocket([])
+    this.socket.connect()
+  },
+  methods: {
+    changeArrivee() {
+      this.socket.emit('changeArrivee', {
 
+      }, (resp) => {
+        console.log('Test')
+      })
+    },
   }
 }
 </script>
@@ -31,5 +39,6 @@ export default {
 #app {
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 </style>

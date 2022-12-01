@@ -4,7 +4,7 @@
       <l-map :zoom=15 :center="[this.latUser,this.longUser]">
         <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
         <l-marker id="myPosition"  :icon="iconPosition" :lat-lng="[this.latUser,this.longUser]"></l-marker>
-        <l-marker id="arrival"  :icon="iconArrivee" :lat-lng="locArrivee"></l-marker>
+        <ArrivalMarker/>
         <Restaurant/>
         <l-polyline id="myPath" :color="color" :lat-lngs="myCoords"></l-polyline>
       </l-map>
@@ -19,30 +19,24 @@ export default {
 
   data() {
     return{
-      latUser: 0,
-      longUser: 0,
+      latUser: 1,
+      longUser: 1,
       iconPosition: icon({
         iconUrl: "./img/iconPosition.png",
         iconSize: [35, 35],
         iconAnchor: [35, 35],
       }),
-      iconArrivee: icon({
-        iconUrl: "./img/iconArrivee.png",
-        iconSize: [35, 55],
-        iconAnchor: [35, 55],
-      }),
-      locArrivee : [48.8917697268483, 2.2247726384151627],
       color: '#000',
       myCoords: [
-        [48.8917697268483, 2.2247726384151627],
-        [44.83420128726598,-0.5665188342132396],
+        [0,0],
+        [0,0],
+        [0,0],
       ]
-
     }
   },
   mounted ()  {
-    console.log('Hello')
     this.getLocation()
+    console.log(this.myCoords)
   },
   methods: {
     getLocation() {
@@ -53,6 +47,11 @@ export default {
             this.longUser = position.coords.longitude;
             console.log(this.latUser + ',' + this.longUser);
             this.getRealDistance();
+            this.myCoords = [
+                [this.latUser, this.longUser],
+                [48.895399960735304, 2.2242185663116274],
+                [48.8917697268483, 2.2247726384151627],
+            ]
           },
           (err) => {
             console.log(err);
@@ -71,13 +70,13 @@ export default {
       // Convert degrees to radians
       // Lats
       let radiusLatFrom = this.latUser * (Math.PI /180);
-      let radiusLatRestau = 44.83420128726598 * (Math.PI /180);
-      let radiusLatTo = this.locArrivee[0] * (Math.PI /180);
+      let radiusLatRestau = this.myCoords[1][0]* (Math.PI /180);
+      let radiusLatTo = this.myCoords[2][0] * (Math.PI /180);
 
       // Longs
       let radiusLongFrom = this.longUser * (Math.PI /180);
-      let radiusLongRestau = -0.5665188342132396 * (Math.PI /180);
-      let radiusLongTo = this.locArrivee[1] * (Math.PI /180);
+      let radiusLongRestau = this.myCoords[1][1] * (Math.PI /180);
+      let radiusLongTo = this.myCoords[2][1] * (Math.PI /180);
 
       let deltaLongToRestau = radiusLongRestau - radiusLongFrom;
       let deltaLongToArrival = radiusLongFrom - radiusLongTo;
@@ -102,7 +101,7 @@ export default {
 <style>
 #map-wrap {
   height: 94vh;
-  width: 70%;
+  width: 60%;
   margin-top: 2vh;
 }
 </style>

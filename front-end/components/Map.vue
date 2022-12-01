@@ -6,6 +6,7 @@
         <l-marker id="myPosition"  :icon="iconPosition" :lat-lng="[this.latUser,this.longUser]"></l-marker>
         <l-marker id="arrival"  :icon="iconArrivee" :lat-lng="locArrivee"></l-marker>
         <Restaurant/>
+        <l-polyline id="myPath" :color="color" :lat-lngs="myCoords"></l-polyline>
       </l-map>
     </client-only>
 </div>
@@ -31,6 +32,12 @@ export default {
         iconAnchor: [35, 55],
       }),
       locArrivee : [48.8917697268483, 2.2247726384151627],
+      color: '#000',
+      myCoords: [
+        [48.8917697268483, 2.2247726384151627],
+        [44.83420128726598,-0.5665188342132396],
+      ]
+
     }
   },
   mounted ()  {

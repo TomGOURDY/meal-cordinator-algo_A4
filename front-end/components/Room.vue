@@ -59,13 +59,13 @@ h1 {
 
 .personCard h2 {
   font-size:15px;
-  color: aliceblue;
+  color: #f0f8ff;
 }
 
 .color {
   width: 25px;
   border-radius: 25px;
-  background-color: aquamarine;
+  background-color: #7fffd4;
 }
 
 </style>
